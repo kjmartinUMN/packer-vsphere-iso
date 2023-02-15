@@ -1,15 +1,14 @@
-# vCenter credentials
-# Use environment variables or pass with build command
-# vcenter_username = ""
-# vcenter_password = ""
 
-# vCenter details
-vcenter_server = ""
+vcenter_username = "easkjmartin"
+ vcenter_password = ""
+
+
+vcenter_server = "vc-test01.oit.umn.edu"
 vcenter_sslconnection = true
-vcenter_datacenter = ""
-vcenter_cluster = ""
-vcenter_datastore = ""
-vcenter_folder = ""
+vcenter_datacenter = "TEST01"
+vcenter_cluster = "TST"
+vcenter_datastore = "oit-test-001"
+vcenter_folder = "Packer"
 
 # VM Hardware Configuration
 vm_os_type = "windows9Server64Guest"
@@ -19,7 +18,7 @@ vm_cpu_sockets = 2
 vm_cpu_cores = 1
 vm_ram = 4096
 vm_nic_type = "vmxnet3"
-vm_network = ""
+vm_network = "TEST2_DC05-WG015_10.32.114.0_25_v840"
 vm_disk_controller = ["pvscsi"]
 vm_disk_size = 20480
 vm_disk_thin = true
@@ -32,11 +31,11 @@ config_parameters = {
 }
 
 # Removable Media Configuration
-vcenter_iso_datastore = ""
-os_iso_path = ""
-os_iso_file = "20348.169.210806-2348.fe_release_svc_refresh_SERVER_EVAL_x64FRE_en-us.iso"
-vmtools_iso_path = ""
-vmtools_iso_file = "VMware-tools-windows-11.3.5-18557794.iso"
+vcenter_iso_datastore = "oit-test-001"
+os_iso_path = "/ISOs/"
+os_iso_file = "SW_DVD9_Win_Server_STD_CORE_2022_2108.1_64Bit_English_DC_STD_MLF_X22-82986.ISO"
+vmtools_iso_path = "/ISOs"
+vmtools_iso_file = "vmware Tools.iso"
 vm_cdrom_remove = true
 
 # Build Settings
